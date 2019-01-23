@@ -16,11 +16,13 @@ const context = {
 
 
     // What is the value of `this` when we call ship.fly()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'global window object';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    /*the fly method is refering to the global window object because
+    it is written in ES6 with an arrow function and it's called
+    immediately upon declaration*/
   },
 
   exerciseB() {
@@ -30,11 +32,14 @@ const context = {
     }
     
     // What is the value of `this` when we call fn()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    
+    const result = 'global window object';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    /*this is the global window object because you're not reassigning
+    the value of this in the fn function. You're trying to assign
+    a key value pair to the global window object*/
   },
 
   exerciseC() {
@@ -46,10 +51,10 @@ const context = {
     };
 
     const el = document.getElementById('btn');
-    el.addEventListener('click', car.getInfo);
+    // console.log(el.addEventListener('click', car.getInfo));
 
     // What is the value of `this` when a user clicks on our element and car.getInfo() is triggered?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = null;
     return result;
 
     // Annotation: 
